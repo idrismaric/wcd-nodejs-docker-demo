@@ -18,3 +18,4 @@ jobs:
       run: docker build . -f Dockerfile --tag idrismaric/nodejs-github-action-wcd-c3-demo:latest
     - name: Docker push to docker hub account
       run: docker push idrismaric/nodejs-github-action-wcd-c3-demo:latest
+      
