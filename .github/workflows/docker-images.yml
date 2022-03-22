@@ -13,8 +13,7 @@ jobs:
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-      run: |
-      docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Docker build images for nodejs project
       run: docker build . -f Dockerfile --tag idrismaric/nodejs-github-action-wcd-c3-demo:latest
     - name: Docker push to docker hub account
